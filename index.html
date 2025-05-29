@@ -17,7 +17,7 @@
 
   <header class="site-header" role="banner" itemscope itemtype="https://schema.org/Organization">
     <h1 itemprop="name">Jam Box Studios</h1>
-    <nav id="main-nav" class="main-nav" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+    <nav id="main-nav" class="main-nav" role="navigation" aria-label="Main Navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
       <ul>
         <li><a href="#" itemprop="url">Home</a></li>
         <li><a href="#" itemprop="url">Products</a></li>
@@ -27,14 +27,16 @@
     </nav>
   </header>
 
-  <img src="https://placekitten.com/1200/900" class="banner" alt="Banner image" itemprop="image">
+  <div itemscope itemtype="https://schema.org/ImageObject">
+    <img src="https://placekitten.com/1200/900" class="banner" alt="Banner image" itemprop="contentUrl">
+  </div>
 
-  <section id="main-content" class="main-content" role="main" itemscope itemtype="https://schema.org/AboutPage">
-    <h1 itemprop="headline">Welcome to Jam Box</h1>
+  <main id="main-content" class="main-content" role="main" itemscope itemtype="https://schema.org/AboutPage">
+    <h2 itemprop="headline">Welcome to Jam Box</h2>
     <p itemprop="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
-    <div class="owner" itemscope itemtype="https://schema.org/Person">
-      <h2>Meet the owner</h2>
+    <section class="owner" itemscope itemtype="https://schema.org/Person">
+      <h2>Meet the Owner</h2>
       <ul>
         <li><strong>Name:</strong> <span itemprop="name">John Doe</span></li>
         <li><strong>Title:</strong> <span itemprop="jobTitle">CEO</span></li>
@@ -49,32 +51,37 @@
         <span itemprop="postalCode">B3T 0L0</span>, 
         <span itemprop="addressCountry">CA</span>
       </p>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <div id="contact" class="contact-section" role="form" itemscope itemtype="https://schema.org/ContactPage">
+  <section id="contact" class="contact-section" itemscope itemtype="https://schema.org/ContactPage">
     <h2>Contact Us</h2>
     <form id="contact-form" action="thanks.html" itemscope itemtype="https://schema.org/ContactPoint">
       <label for="fullname">Full Name</label>
-      <input type="text" id="fullname" name="fullname" itemprop="name">
+      <input type="text" id="fullname" name="fullname" itemprop="name" aria-labelledby="fullname-label">
+      
+      <label id="fullname-label" hidden>Full Name</label>
 
       <label for="email">Email</label>
-      <input type="text" id="email" name="email" placeholder="Email" itemprop="email">
+      <input type="email" id="email" name="email" placeholder="Email" itemprop="email" aria-labelledby="email-label">
+      
+      <label id="email-label" hidden>Email</label>
 
       <label for="subject">Subject</label>
       <input type="text" id="subject" name="subject" placeholder="Subject">
 
       <label for="message">Your Message</label>
-      <textarea id="message" name="message"></textarea>
+      <textarea id="message" name="message" aria-labelledby="message-label"></textarea>
+      
+      <label id="message-label" hidden>Message</label>
 
-      <button type="submit">Send</button>
+      <button type="submit" aria-label="Send Message">Send</button>
     </form>
-  </div>
+  </section>
 
   <footer id="footer" class="site-footer" role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
-    &copy; <span itemprop="copyrightYear">2021</span> <span itemprop="copyrightHolder">Jam Box Studios</span>
+    <p>&copy; <span itemprop="copyrightYear">2021</span> <span itemprop="copyrightHolder">Jam Box Studios</span></p>
   </footer>
 </body>
 </html>
-
 
