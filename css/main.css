@@ -70,3 +70,13 @@ form button {
 .site-footer {
   padding: 2rem 0;
 }
+
+button {
+  background-color: black;
+  color: black;
+  border: 2px solid black;
+}
+
+button:hover {
+  background-color: grey;
+}
