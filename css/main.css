@@ -80,3 +80,22 @@ button {
 button:hover {
   background-color: grey;
 }
+
+
+/* Skip link outline */
+
+.skip-link {
+  position: absolute;
+  top: -60px; /*Keeps skip link off screen until use */
+  left: 10px;
+  background: lightblue;
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  z-index: 100; /* Makes it above most of the elements */
+}
+
+.skip-link:focus {
+  top: 10px; /* changes skip-link only when in focus */
+}
+
