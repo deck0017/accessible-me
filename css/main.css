@@ -99,5 +99,7 @@ button:hover {
 
 .skip-link:focus {
   top: 10px; /* changes skip-link only when in focus */
+    outline: 4px solid black;
+
 }
 
