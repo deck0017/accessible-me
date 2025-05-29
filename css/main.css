@@ -72,9 +72,9 @@ form button {
 }
 
 button {
-  background-color: black;
+  background-color: lightgray;
   color: black;
-  border: 2px solid black;
+  border: 2px solid lightgray;
 }
 
 button:hover {

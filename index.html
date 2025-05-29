@@ -4,74 +4,70 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accessible Me</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&family=Stick+No+Bills:wght@300&display=swap" rel="stylesheet">
+  <title itemprop="name">Accessible Me</title>
   <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
-  <!-- Skip Links added here -->
-  <a href="#main-content" class="skip-link" role="navigation">Skip to main content</a>
-  <a href="#main-nav" class="skip-link" role="navigation">Skip to navigation</a>
-  <a href="#contact" class="skip-link" role="navigation">Skip to contact section</a>
-  <a href="#footer" class="skip-link" role="navigation">Skip to footer</a>
+<body itemscope itemtype="https://schema.org/WebPage">
+  <header class="site-header" role="banner" itemscope itemtype="https://schema.org/Organization">
+    <h1 itemprop="name">Jam Box Studios</h1>
+    <nav id="main-nav" class="main-nav" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+      <ul>
+        <li><a href="#" itemprop="url">Home</a></li>
+        <li><a href="#" itemprop="url">Products</a></li>
+        <li><a href="#" itemprop="url">Reservation</a></li>
+        <li><a href="#" itemprop="url">Studio</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div class="container">
-    <header class="site-header" role="banner">
-      <h1>Jam Box Studios</h1>
-      <nav id="main-nav" class="main-nav" role="navigation">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Reservation</a></li>
-          <li><a href="#">Studio</a></li>
-        </ul>
-      </nav>
-    </header>
+  <img src="https://placekitten.com/1200/900" class="banner" alt="Banner image" role="image" itemprop="image">
 
-    <img src="https://placekitten.com/1200/900" class="banner" alt="Banner image" role="image">
+  <section id="main-content" class="main-content" role="main" itemscope itemtype="https://schema.org/AboutPage">
+    <h1 itemprop="headline">Welcome to Jam Box</h1>
+    <p itemprop="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
-    <section id="main-content" class="main-content" role="main">
-      <h1>Welcome to Jam Box</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      <p>Veniam perferendis expedita sed itaque odit ipsam omnis.</p>
+    <div class="owner" role="ownerinfo" itemscope itemtype="https://schema.org/Person">
+      <h2>Meet the owner</h2>
+      <ul>
+        <li><strong>Name:</strong> <span itemprop="name">John Doe</span></li>
+        <li><strong>Title:</strong> <span itemprop="jobTitle">CEO</span></li>
+        <li><strong>Email:</strong> <span itemprop="email">johnjoe@jambox.ca</span></li>
+        <li><strong>Phone:</strong> <span itemprop="telephone">613-000-0000</span></li>
+      </ul>
+      <h2>Address</h2>
+      <p itemscope itemtype="https://schema.org/PostalAddress">
+        <span itemprop="streetAddress">123 Guitar Road</span>, 
+        <span itemprop="addressLocality">Musicville</span>, 
+        <span itemprop="addressRegion">Danceistan</span>, 
+        <span itemprop="postalCode">B3T 0L0</span>, 
+        <span itemprop="addressCountry">CA</span>
+      </p>
+    </div>
+  </section>
 
-      <div class="owner" role="ownerinfo">
-        <h2>Meet the owner</h2>
-        <ul>
-          <li><strong>Name:</strong> John Doe</li>
-          <li><strong>Title:</strong> CEO</li>
-          <li><strong>Email:</strong> johnjoe@jambox.ca</li>
-          <li><strong>Phone:</strong> 613-000-0000</li>
-        </ul>
-        <h2>Address</h2>
-        <p>Jambox Studios<br>123 Guitar Road,<br>Musicville, Danceistan<br>B3T 0L0</p>
-      </div>
+  <div id="contact" class="contact-section" role="form" itemscope itemtype="https://schema.org/ContactPage">
+    <h2>Contact Us</h2>
+    <form id="contact-form" action="thanks.html" itemscope itemtype="https://schema.org/ContactPoint">
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" itemprop="name">
 
-      <div id="contact" class="contact-section" role="form">
-        <h2>Contact Us</h2>
-        <form id="contact-form" action="thanks.html">
-          <label for="fullname">Full Name</label>
-          <input type="text" id="fullname" name="fullname">
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email" placeholder="Email" itemprop="email">
 
-          <label for="email">Email</label>
-          <input type="text" id="email" name="email" placeholder="Email">
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" placeholder="Subject">
 
-          <label for="subject">Subject</label>
-          <input type="text" id="subject" name="subject" placeholder="Subject">
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message"></textarea>
 
-          <label for="message">Your Message</label>
-          <textarea id="message" name="message"></textarea>
-
-          <button type="submit" role="button">Send</button>
-        </form>
-      </div>
-    </section>
-
-    <footer id="footer" class="site-footer" role="copyrightinfo">
-      &copy; 2021 Jam Box Studios
-    </footer>
+      <button type="submit" role="button">Send</button>
+    </form>
   </div>
+
+  <footer id="footer" class="site-footer" role="copyrightinfo" itemscope itemtype="https://schema.org/WPFooter">
+    &copy; <span itemprop="copyrightYear">2021</span> <span itemprop="copyrightHolder">Jam Box Studios</span>
+  </footer>
 </body>
+</html>
+
