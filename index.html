@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title itemprop="name">Accessible Me</title>
+  <title>Accessible Me</title>
   <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -21,13 +21,13 @@
     </nav>
   </header>
 
-  <img src="https://placekitten.com/1200/900" class="banner" alt="Banner image" role="image" itemprop="image">
+  <img src="https://placekitten.com/1200/900" class="banner" alt="Banner image" itemprop="image">
 
   <section id="main-content" class="main-content" role="main" itemscope itemtype="https://schema.org/AboutPage">
     <h1 itemprop="headline">Welcome to Jam Box</h1>
     <p itemprop="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
-    <div class="owner" role="ownerinfo" itemscope itemtype="https://schema.org/Person">
+    <div class="owner" itemscope itemtype="https://schema.org/Person">
       <h2>Meet the owner</h2>
       <ul>
         <li><strong>Name:</strong> <span itemprop="name">John Doe</span></li>
@@ -61,11 +61,11 @@
       <label for="message">Your Message</label>
       <textarea id="message" name="message"></textarea>
 
-      <button type="submit" role="button">Send</button>
+      <button type="submit">Send</button>
     </form>
   </div>
 
-  <footer id="footer" class="site-footer" role="copyrightinfo" itemscope itemtype="https://schema.org/WPFooter">
+  <footer id="footer" class="site-footer" role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
     &copy; <span itemprop="copyrightYear">2021</span> <span itemprop="copyrightHolder">Jam Box Studios</span>
   </footer>
 </body>
